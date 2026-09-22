@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXORA - iQOO Hackathon Presentation Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+            },
+            cyber: {
+              cyan: '#06b6d4',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              rose: '#f43f5e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @page {
+      size: 16in 9in;
+      margin: 0;
+    }
+    @media print {
+      body {
+        background: #080C15 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .slide-container {
+        page-break-after: always;
+        break-after: page;
+        height: 100vh !important;
+        width: 100vw !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-[#080C15] text-slate-100 font-sans selection:bg-brand-500/30 selection:text-brand-300">
+
+  <!-- Top Floating Controls for User -->
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-3 no-print bg-slate-900/90 backdrop-blur-md p-2.5 rounded-2xl border border-slate-700 shadow-2xl">
+    <button onclick="window.print()" class="px-4 py-2 bg-gradient-to-r from-brand-600 to-cyber-cyan text-white text-xs font-bold rounded-xl shadow-lg hover:opacity-95 transition flex items-center gap-2">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+      Save as PDF / Print Deck
+    </button>
+  </div>
+
+  <!-- ==================== SLIDE 1: COVER ==================== -->
+  <section class="slide-container min-h-screen w-full flex flex-col justify-between p-12 lg:p-16 relative overflow-hidden border-b border-slate-800">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyber-cyan/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="flex items-center justify-between relative z-10">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-cyber-cyan flex items-center justify-center font-black text-xl text-white shadow-lg">N</div>
+        <span class="text-2xl font-black tracking-tight text-white">NEXORA</span>
+      </div>
+      <span class="px-4 py-1.5 rounded-full bg-brand-500/10 text-brand-300 border border-brand-500/25 text-xs font-bold uppercase tracking-wider">
+        iQOO Hackathon Phase 1 Submission
+      </span>
+    </div>
+
+    <div class="my-auto space-y-6 max-w-4xl relative z-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyber-cyan/10 border border-cyber-cyan/25 text-cyber-cyan text-xs font-semibold">
+        AI-Powered Career & Placement Readiness Ecosystem
+      </div>
+      <h1 class="text-5xl lg:text-7xl font-black tracking-tight text-white leading-tight">
+        Cracking Placements with <span class="bg-gradient-to-r from-brand-400 via-cyber-cyan to-cyber-emerald bg-clip-text text-transparent">Intelligent AI Coaching</span>.
+      </h1>
+      <p class="text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl">
+        An all-in-one platform integrating voice-enabled mock interviews, company-specific resume diagnostics, official pattern aptitude tests, and real-time DSA code execution.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-800/80 text-xs text-slate-400 relative z-10">
+      <div>
+        <span class="text-slate-500">Presented by: </span>
+        <strong class="text-white text-sm">Durga Trinadh</strong> (Team NEXORA)
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Live Prototype: <a href="https://nexora-nine-ruddy.vercel.app" class="text-cyber-cyan font-mono font-bold underline">nexora-nine-ruddy.vercel.app</a></span>
+        <span>•</span>
+        <span>GitHub: <a href="https://github.com/DurgaTrinadh/nexora" class="text-brand-400 font-mono font-bold underline">github.com/DurgaTrinadh/nexora</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SLIDE 2: THE PROBLEM ==================== -->
+  <section class="slide-container min-h-screen w-full flex flex-col justify-between p-12 lg:p-16 relative overflow-hidden border-b border-slate-800">
+    <div class="flex items-center justify-between pb-6 border-b border-slate-800/80">
+      <span class="text-xs font-bold uppercase tracking-widest text-cyber-rose">Problem Statement</span>
+      <span class="text-xs text-slate-500">Slide 02</span>
+    </div>
+
+    <div class="my-auto space-y-8 max-w-6xl">
+      <div>
+        <h2 class="text-4xl font-extrabold text-white">The Fragmented & High-Friction Placement Journey</h2>
+        <p class="text-base text-slate-400 mt-2">Over 1.5 million engineering graduates in India face 4 major bottlenecks during campus recruitment:</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-cyber-rose space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center font-bold text-lg">01</div>
+          <h3 class="text-base font-bold text-white">Fragmented Tools</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Students juggle 5-6 disconnected portals: LeetCode for DSA, Indiabix for Aptitude, Notion for job tracking, and random Google Docs for resumes.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-amber-500 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-lg">02</div>
+          <h3 class="text-base font-bold text-white">No Voice Practice</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Engineering students excel in coding on paper, but freeze in live interviews due to lack of realistic voice and STAR-method communication practice.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-purple-500 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-lg">03</div>
+          <h3 class="text-base font-bold text-white">Blind ATS Rejections</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Students apply to Google, Amazon, and TCS using identical generic resumes without knowing company-specific keywords, metrics, or red flags.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-lg">04</div>
+          <h3 class="text-base font-bold text-white">Unrealistic Exams</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Traditional practice apps lack real exam environments like TCS iON / AMCAT countdown palettes, negative marking, and mathematical explanations.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-xs text-slate-500">NEXORA Pitch Deck • iQOO Hackathon</div>
+  </section>
+
+  <!-- ==================== SLIDE 3: THE SOLUTION ==================== -->
+  <section class="slide-container min-h-screen w-full flex flex-col justify-between p-12 lg:p-16 relative overflow-hidden border-b border-slate-800">
+    <div class="flex items-center justify-between pb-6 border-b border-slate-800/80">
+      <span class="text-xs font-bold uppercase tracking-widest text-cyber-emerald">Our Solution</span>
+      <span class="text-xs text-slate-500">Slide 03</span>
+    </div>
+
+    <div class="my-auto space-y-8 max-w-6xl">
+      <div>
+        <h2 class="text-4xl font-extrabold text-white">Introducing NEXORA: The All-In-One Unified Suite</h2>
+        <p class="text-base text-slate-400 mt-2">A single intelligent platform engineered to guide students through every stage of recruitment.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl border border-brand-500/30 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-300 flex items-center justify-center font-bold text-xl">🎙️</div>
+          <h3 class="text-lg font-bold text-white">AI Voice Mock Interviews</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Speaking avatar with natural speech synthesis + live microphone transcription. Delivers instant STAR scorecard, confidence rating, and ideal responses.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-cyber-cyan/30 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyber-cyan flex items-center justify-center font-bold text-xl">📝</div>
+          <h3 class="text-lg font-bold text-white">TCS iON Exam Simulator</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Real test portal with countdown timer, official question palette (Answered, Marked for Review), and complete step-by-step mathematical explanations.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-cyber-emerald/30 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-cyber-emerald flex items-center justify-center font-bold text-xl">📄</div>
+          <h3 class="text-lg font-bold text-white">Company Resume Analyzer</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Evaluates resumes specifically against Google, Amazon, TCS, and startups. Delivers ATS match score, Positives/Negatives, and Google XYZ formula rewrites.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-purple-500/30 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-300 flex items-center justify-center font-bold text-xl">💻</div>
+          <h3 class="text-lg font-bold text-white">DSA Arena & Test Runner</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Multi-language code workspace (JavaScript, Python, C++, Java) with sandboxed test case execution, complexity guide, and company-tagged roadmaps.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-amber-500/30 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-300 flex items-center justify-center font-bold text-xl">📋</div>
+          <h3 class="text-lg font-bold text-white">Job Application Kanban</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            6 recruitment stages (Wishlist, Applied, OA, Interview, Offer, Rejected) with conversion funnel metrics and curated 2026/2027 off-campus drives.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-pink-500/30 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-300 flex items-center justify-center font-bold text-xl">🤖</div>
+          <h3 class="text-lg font-bold text-white">24/7 Nexora AI Mentor</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Full-page assistant + global floating widget for continuous placement queries, salary negotiation tips, and Gemini API integration.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-xs text-slate-500">NEXORA Pitch Deck • iQOO Hackathon</div>
+  </section>
+
+  <!-- ==================== SLIDE 4: ARCHITECTURE & INNOVATION ==================== -->
+  <section class="slide-container min-h-screen w-full flex flex-col justify-between p-12 lg:p-16 relative overflow-hidden border-b border-slate-800">
+    <div class="flex items-center justify-between pb-6 border-b border-slate-800/80">
+      <span class="text-xs font-bold uppercase tracking-widest text-cyber-cyan">Architecture & Tech Stack</span>
+      <span class="text-xs text-slate-500">Slide 04</span>
+    </div>
+
+    <div class="my-auto space-y-8 max-w-6xl">
+      <div>
+        <h2 class="text-4xl font-extrabold text-white">Engineered for Blazing Speed & Zero Downtime</h2>
+        <p class="text-base text-slate-400 mt-2">Zero backend failure points: 100% persistent, responsive, and deployable worldwide.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-8 rounded-3xl space-y-5 border border-slate-800">
+          <h3 class="text-lg font-bold text-cyber-cyan">Client-First High Performance Stack</h3>
+          <ul class="space-y-3 text-xs text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-400 font-bold">⚡ React 18 + Vite + TypeScript:</span>
+              <span>Sub-second bundle transforms, strict type safety, zero compile runtime overhead.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-400 font-bold">🎙️ Web Speech API:</span>
+              <span>Native browser speech synthesis (Text-to-Speech) and recognition (Voice-to-Text) with zero API latency and zero cost.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-400 font-bold">🎨 Tailwind CSS Design System:</span>
+              <span>Ultra-modern dark glassmorphism, responsive grid layouts, and custom animation keyframes.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-400 font-bold">🛡️ LocalStorage State Sync:</span>
+              <span>All solved problems, interview scores, aptitude results, and job boards persist across browser sessions.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl space-y-5 border border-slate-800">
+          <h3 class="text-lg font-bold text-brand-300">Hybrid AI Evaluation Engine</h3>
+          <ul class="space-y-3 text-xs text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-cyber-cyan font-bold">🧠 Heuristic Placement Rules:</span>
+              <span>Pre-loaded with deep domain rubrics for Google, Amazon, TCS, Goldman Sachs, and startups (works 100% offline).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-cyber-cyan font-bold">✨ Optional Gemini 1.5 Integration:</span>
+              <span>Seamless plug-in support for free Google Gemini API keys for candidates wanting live LLM follow-ups.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-cyber-cyan font-bold">📊 Placement Readiness Index:</span>
+              <span>Weighted formula dynamically aggregating DSA (30%), Aptitude (25%), Mock Interviews (25%), and Resume ATS (20%).</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-xs text-slate-500">NEXORA Pitch Deck • iQOO Hackathon</div>
+  </section>
+
+  <!-- ==================== SLIDE 5: LIVE DEMO & CONCLUSION ==================== -->
+  <section class="slide-container min-h-screen w-full flex flex-col justify-between p-12 lg:p-16 relative overflow-hidden">
+    <div class="flex items-center justify-between pb-6 border-b border-slate-800/80">
+      <span class="text-xs font-bold uppercase tracking-widest text-cyber-emerald">Verification & Impact</span>
+      <span class="text-xs text-slate-500">Slide 05</span>
+    </div>
+
+    <div class="my-auto space-y-8 max-w-4xl text-center mx-auto">
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-cyber-cyan mx-auto flex items-center justify-center font-bold text-3xl text-white shadow-xl shadow-brand-500/30">
+        🏆
+      </div>
+
+      <div class="space-y-3">
+        <h2 class="text-4xl lg:text-5xl font-black text-white">NEXORA is Live & Verified!</h2>
+        <p class="text-base text-slate-300 max-w-2xl mx-auto">
+          Built, tested, compiled with 0 errors, and deployed to production for the iQOO Hackathon.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-3xl glass-card border border-brand-500/40 text-left max-w-xl mx-auto space-y-3">
+        <div class="flex justify-between text-xs">
+          <span class="text-slate-400">Production URL:</span>
+          <a href="https://nexora-nine-ruddy.vercel.app" class="text-cyber-cyan font-mono font-bold hover:underline">https://nexora-nine-ruddy.vercel.app</a>
+        </div>
+        <div class="flex justify-between text-xs">
+          <span class="text-slate-400">GitHub Repository:</span>
+          <a href="https://github.com/DurgaTrinadh/nexora" class="text-brand-300 font-mono font-bold hover:underline">https://github.com/DurgaTrinadh/nexora</a>
+        </div>
+        <div class="flex justify-between text-xs">
+          <span class="text-slate-400">Deploy Status:</span>
+          <span class="text-emerald-400 font-bold">🟢 Production (Ready in 15s)</span>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-400">
+        Empowering every engineering graduate to bridge the gap between academic theory and high-paying software engineering offers.
+      </p>
+    </div>
+
+    <div class="flex items-center justify-between pt-6 border-t border-slate-800 text-xs text-slate-500">
+      <span>Team NEXORA • Durga Trinadh</span>
+      <span>Thank you, Judges & Mentors!</span>
+    </div>
+  </section>
+
+</body>
+</html>
